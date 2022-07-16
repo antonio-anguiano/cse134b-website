@@ -1,35 +1,303 @@
 <!DOCTYPE html>
 <html lang="en"></html>
-<link href="assets/stylesheet.css" rel="stylesheet">
+
 <head>
     <meta charset="UTF-8">
     <title>Your #1 Applicant :)</title>
+    <link href="assets/stylesheet.css" rel="stylesheet">
+    <style>
+        h1 {
+            border: 1px solid black
+        }
+    </style>
 </head>
 <body>
-<nav>
-    <a href="portfolio.html" target="_self">portfolio</a>
-</nav>
-<h1><b>Antonio Anguaino</b></h1>
-<article>
-    <h2>About Me</h2>
-    <h3>bio</h3>
-    <p>i'm like, just a guy ya know</p>
-    <aside>
-        <h3>technical skills</h3>
-        <p>html 1 star general</p>
-        <!-- this is gonna be my 1 star! -->
-        <canvas width="200" height="200">
+<header>
+    <section id="navbar">
+        <nav>
+            <ul>
+                <!-- edit with css later -->
+                <li><span>
+                    <a href="portfolio.html" target="_self">portfolio</a>
+                </span></li>
+            </ul>
+        </nav>
+    </section>
+    <h1><b>Antonio Anguaino</b></h1>
+    <div class="underline"></div>
+</header>
+<section id="bio">
+    <header>
+        <h2>About Me</h2>
+    </header>
+    <main>
+        <article>
+            <p>i'm like just a guy</p>
+        </article>
+        <aside>
+            <picture>
+                <source srcset="assets/selfie.jpg" media="(min-width: 200px)">
+                <img src="assets/selfie.jpg" width="200" height="200" alt="picture of me">
+            </picture>
+        </aside>
+    </main>
+</section>
+<section id="technical skills">
+    <header>
+        <h2>Technical Skills</h2>
+    </header>
+    <table>
+        <!-- edit columns with css later -->
+        <colgroup>
+            <col>
+            <col span="5">
+        </colgroup>
+        <tr>
+            <th scope="row">html</th>
+            <td> <canvas width="100" height="100">
                 one orange boi
-        </canvas>
-        <script>
-            const canvas = document.querySelector('canvas');
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'orange';
-            ctx.fillRect(10, 10, 100, 100);
-        </script>
-    </aside>
-</article>
-<br>
+            </canvas>
+                <script>
+                    const canvas = document.querySelector('canvas');
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = 'orange';
+                    ctx.fillRect(10, 10, 100, 100);
+                </script></td>
+        </tr>
+        <tr>
+            <th scope="row">CSS</th>
+            <td>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40"
+                             fill="orange" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </td>
+        </tr>
+    </table>
+    <!-- this is gonna be my 1 star! -->
+    <canvas width="200" height="200">
+        one orange boi
+    </canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'orange';
+        ctx.fillRect(10, 10, 100, 100);
+    </script>
+</section>
+<section id="contact form">
+    <h2>Contact Form</h2>
+    <form action="mailto:dummyadress@fakeEmail.com">
+        <fieldset>
+
+            <legend>Contact Me</legend>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required/>
+            <br>
+
+            <label for="selectInquiry">Select reason for message</label>
+            <datalist id="selectInquiry">
+                <option value="inquiry">Reason for Contact</option>
+                <option value="inquiry">inquiry</option>
+                <option value="recruitment">recruitment</option>
+            </datalist>
+
+            <label for="email">Email</label>
+            <input id="email" placeholder="Enter your email"
+                   required
+                   type="email"
+            />
+
+        <label for="message">message:</label> <br>
+        <textarea id="message"
+                  cols="50" rows="20"
+                  placeholder="Enter your Message"
+                  required
+        ></textarea>
+
+            <label>
+                <input type="submit" value="submit" />
+            </label>
+
+        </fieldset>
+    </form>
+
+</section>
+<section id="tests">
+    <h2>wacky lab section :<em>></em></h2>
+    <h4>wait a second, someone turned me into ascii???</h4>
+    <pre>nnnnxnnrxxxxxxrxxrrrrxxjjjrjjrjjjfffjfffftftffttfttttft/ttttttttt/|t///ttt/tt//////////|||/||||||||(((|(|))(())(
+unnnnnnxxnxxxxxxxrrxxxrrrrrjjrjjjjffffjfffftttftttfftttt//ttt//tt///////t/////////||||/|/|||||||||(|(|(((((())))
+nnnnnnxnnxnxnxxxxxxxrxrrrrrrrjrjjjfjjjjfjfttfttftttfftttttttttttt/////tt/tt//t/////|||//|//||||||||||(||(((((()(
+nnnnnnnnnxxnxxxnxrxrrxrxrrjrrrjjjjffffffjfftttftfftfftfffttftttt/tt////////|/|///|/||///||||||//||||||((|(((((()
+unnnnnnnnnnxxxxxxxxxxxxrrrrrrjrrjrjjjfjfjjtffttftttfffttttttt/ttttttt/t////t/tt//t/////|//||||||||||||((((||(((|
+unnnunnnnnnnxnxxxxxxxrrxxrrrxrrjjjrjfjffffffffftfffffttftttttttttt/tttt/t/t//t////|//|//||/||||||||||(|(|(((((||
+uunnnnnnnnnnnnxxxxxxxxxxrrxrrrrrrjrjjjffjjfjfftftfffffttfttt/tttttttt/tt///t///////////||||/||||||(|||(||(||(|(|
+uuuunnnnnnnnxnxnxnxxxxxxxxrrrrrrrrjjjjffjjfjjjffffftttttttttttftttttttttt//t/////////|//|||||||||||||||(((((|((|
+uuuuuuuunnnunnxnnxxxxxxxxxrxrxrrrrjjjjjjjjjfjjffffffftfftttftttttttt/tttt///t//////////|/|/|||||||||||||||||((||
+uuuuuuuuuuununnnxnxxxxxxxxxxxxxrrrrjjjjjjjjjjjffffffffftfftttftttttttttt/ttt//t//t////|||/|||||||||||(|||((|||||
+uuuuuunuuuunnnnnnnnnnxxxxxxxxxrxrrrjrjjjjjjjjjjfffffffffftfftttttttttttttt/t/tt/tt///////|/|||||||||||||||((||(|
+vuuuuuuuuuunnnnnnxxnxxxxxxnxxxxxxrrrrjjrjjjrrjjfjfjffffttfttttttftttttttt/t//t/tt/////|||||||||/|||/|||||/||(|||
+uuuuuuuuuuunnnnnnnnnnnxxxxxxxxxxrrrrrjjjjjjjjjjjjjfjjfffftttttttfttttttttttt////ttt//////|///|/|||/||||||||||||/
+uuuuuuuuunnnnnnnnnnxnxnnxxxxxxxxrxjjjjjjjjjjjjjjjfftttttfffffttttttttttttttttttt/t/tt/////|||//|||||||||||||||||
+uunnuuuunnnnnnnnnnnnnxxxxxxxxxxxrrrrjjjjjjjjjjjxQa#M*bhqutftfftffttffttttttttt///////t///////////|||||||||||||//
+uuuuuunnnnnnnnnnnnnnnnxxxxxxxxxxxrrrrjjjrjrjjx0oMM&%BW#%M0vuYQmwOLXrttttttttttt///t/tt//////|////////|///||||///
+uuuunuunnnnnnnnnnnnnnnnnxxxxxxxxrrrrrrjrrjjxLko##8BBB**#&bak*&&MW&&MdXrjfttttttttttttttt////////////////////|///
+uuuuuunnnnnnnnnnnnnnnnxxnxxxxxxxxxrrrxvzcvLaM#W&&%%%Ma8M8a#a*8%88&WWM#bqQXuftttttt//ttt/t/t//////////////////ttt
+unuuunnuuuunnxxxxxnxnxxxxxxxxxxxxxrxdMWMo#M8%B8M&B8MM%8%8&akh#8&M#W8&WMhhMohCftttttttttttt/////////////////tttfj
+uuvuvuuuunnnxxxxrrxrxxxxxxxxxxxxxrxC8&**a*&8BB@WMB8&B%%8&&k&W*b*#WB%8&WMk**aoacjrtttttttt///tttt/ttt///ttttfjjjr
+uuuvvvvvvvn1{1|tffjjjrrrrrrrrrrxrv0M%#o*kM#o*8B&8%&%M*MoM#MMMaaMW*#&%%%&#hW&#**Oxttttttttttttttttttttttttfjjjrrr
+uuuuuuvvvc/][[[[[]}}1((|ttffjjjjv#88W&&Wk*MMW888%&Mhdhhohdpddbbbbppba#&W#oo&&WWWdzftttttttttttttttffttfjjrrrrxj/
+uuuuuvvvcu}[[[]]]]]]]]]]]][[}{1/k#a*#888Mh88W8&oqZCXULQ0QLCJXcvvcXYCOwkdd#&W&##o*pZuftttttfttttttfffjjjjjrrxj/|(
+uuuuuuuuvt]]]]]]]])(}[]]]]]]]]{q#L*8W*M8&a#%#bOXnjttt///||(())1))(|ttuqdZQo#8M8&WWMaCjtfffftffffffjjjrrrrxrt|(()
+nnnnnnuun{]]]]]]][CqwOLYcnj/)}XWhkM88%8aa%8*0Xnf|))1{{}[]?]]????][}1(fwWbUJo%%WW&W*#hbzffffffffjfjjjrrrxrf|(((((
+xxxxnnnut?]]]]]]?(LCLLLQQ00OOOb**M*&88%&pW%kXj/()11{}[[]]]?-_____-]}{|p8qOmmW%%WW#a#okhctjjfjrjjjjrrrrrj/((())))
+nxxnnnnn}?]]????]nCYYUUUUUUULqk#*&#**&&8*#oqUt()11{}}[]??--_++++_?[}1(ChkZ0mC0h&#da&*o&pujfjjjrrrrrrrj/||(()))))
+nxxxnnn/?]??????}YJXYYYYYYO#&&M&8aMwmW##obqbrt/())1{[[]?--_++++_-?[[}{)OoaQnYXCd*dkkh*8aa*Crrrrrrrrr/||((()))111
+nnnnxnn{?????-??fJJYYYYYqM&&*M##MW&Wo*kkhopcxj/(1{}[[]?--_++~~++_-?][}{1nOhphkb*Waa*h&*hp#MXjjrrrrt|||((())))111
+nnnnnut????????]cJJYUUYp&kkW*aoo*a%&Mkbbd0Xnf/){[]]]]]?--_++~~~++_-??[}1|fJOhqq&8&Mbo*ohdadWU{)/|((((((())))1111
+uuuuvu{?????---(UJUYUUULam#ko#W*oo%&#bqqmUur|1}[]???]]]?-_+<<><~~+_-?]}1ruYw0phW88&hhhk*om/pv][[[)((((())))11111
+ttffj/???-----?nJCJUUJJU0k#ba%8Wd#M#*MwmLvxt)1}}[]]???][]-++~+__?]{(/rxc0Oq0CCo%%&Mahk*M#pdbzf({[)||(())))1111{{
+/|///}-?------{XUJUUUUJJJoMqb8%MW&W&%khmJUcxft|(((1[]][{}[{|juzY0wpppddbkpdkbpaW8o*MM##&88aodwQX1/f/||()))11111{
+|||/(?--------fUUYvcvvczzQ*o#WW%88%8#M#hkoakdpmZ0Ccf|()(/fvLmao####okqZphkwpakpaMohWoa#M#Wh8hQXv)|jt//|()))11111
+|||/}--------]cYUcvuuvvccJWW&M%%8%8W&W##MWMMMMMM*kZUnfttrvUZqqwmmm0UzczCoOcCZYJwMpbM#*o*#&oa#Ozv((jft/|(())1111{
+|||(?--------(YYYuunnuvvv0&8Wo8#k%#8MbOLLmmmwppqwqwLzxt/fuYLQ0Oppqdbbbdwh#wQQCYmkooMaho*W%WpaMZu|)jft/|(())1111{
+|||}-?-------nYUznnnnnuuzUM##M&&%M#%hqwbdkdba*M*kwOQJr1-]|nvcvJqCx0&%&ZwoWoqL00JoMW&&MM&WWMW*hWU/{fft/|(()111{{{
+||(?--------1U0qcunnuuuuzCYo%&W**8kbdmphMMppW8MOQOzXc|?+_[|/t/fjnXYC00ZOCXQJXJ0qWooW8##W8*ho**&Lf}tft/|(())111{{
+||}---------nObWYUpUnunczYLLMMh8M&WM*0mdkbq0Q0JXzvuvt}-++-[1)()(|/tfjrxrf/|jzCJ0M#o#MW&WahoWW**bv}tft/|(())1111{
+|(?--------}COdWCw*qUuuzUJYd*M#WM&M#MbQ0QUYzzvuurxnrt)]-_?[}}{1[][{))1))11{1)tUqh&hoW#oaako8Moohp}|ft/|(())11111
+|}---------jLZmOqh*MdJucOQdoa*MW&&%8%qXzJCYxnxftfnxrf1-__?}1111}]]?-?[){)(|(/rX0pbk#adbo#ko*okh#0}(ft/|(())11111
+)?------_-]XLOvUbb#B*kLZ#*a#aa*W8%8WmvnrjtXz|///fnur(}---?]1//|)}?-__{rjtxYJJvnX0Qp*awo##*hhakZab()ft/|(())11111
+[------___/CJcc0qdkh&8W#M8WM#k*8BB%WJcnrftuc(tt/fuut)}]~+?]}))jf)}]??][{umvxXLJUcmW#oo#&&&&8&mZdXt|ft/|(()))1111
+------__-?XZaM**oM&oQq*o*aa#W%%8%BB#0zvnnxCjt|(|frunj(}1)|tf/(|r|{}}{1)tv(/vXXvxY8&8*m#%%&8*dMpcnt{ft/|(())11111
+------___)JqW&#*M&WMWMo*b#W&8&88%&8%aQXzJYxjt/()nXLmLXvvcJwqOUz/?]}1)(||xUUQXnnupB8&oMB%%WMoLJQa&d//rt||())11111
+---_-__--rUhMMW##*ooo*hko*88W88%8#8BMOOUvnxrf/|tuYL0OOQLCUYYXvt}]][{)|/tffjncuXUaB%&W888MWWMpCYmZCQxtjt|(()))111
+-----__-{uL#M####aaaah*kbo&8%&&888&&apLQCvnxftffxvUQZOJcucvYXXzr|)))(|/tjjrxxvUOd&%8&o*Woa#*#amJYJUrttr|(()))111
+-----_--jXUJUUJL00mwpkWhao*MMW&88%W*&#ZUzvnxxvczUOmOJYcuuvrxnznXLLXXzujfjjrnvcUmoW%%8&aoWa**M&#QXX((ttn|((()))11
+-----_-[Y0LmwwwmZO0CJYkwJoopbMoW%%8MWdhOYcuzLZqq0LYcvnjt/jucuxfruCZmqwUrrxvcXJOq*&8%%8Wo*&88%BWkdCj{tnr||(()))11
+-------/J0znnunucvUOQOpbMokaoohM8%%o#MMh0YzQbdwOJYQwwwmZZO000ZmOCJCCLm0zvcXYLmdhW%B8%%8&8888W**qXzr|uf//||()))))
+??----]cCwqUJQQQzUO0JLCXXQadOdaM%&8@ZOMMhqLJCQ0ZppmOLUYYJznjjjczYJXXJCznvUQ0Oda*&BBB8W888#*M#o%qvnt{fttxx|(()))1
+???---|JJJYXmOJYLQO0OmZZmppoMoW*b%MW8@@&MopQJLUXXUYXcuxxrrrxuvvuunnxzCUzY0ddda#8B8888%8&&%88**Wb0QLzQzj/||(())))
+]????]cZOCC0#%8pCwQUCQpo&WWMbOwpqpW&BB%%8W#hpqCXXULQZmZZZZmZOQJXcuxxcJZqZwdo#W&%B%B8BB%8B88MM#*&amY{|ft//|((()))
+]]]]])QZvLbM8%B*ZJC0mM&W&Wddkhp#*&W8BBB%88&#o*bmJUUJLLQ0QLJJXzcunnuXCZqdbkkoW&M%B88%%B&8%&&WMMWW*koaw00CXvnj()))
+]]]]?uOuvmW8888aQJCd#M#**bUvJZ&mW8%BBBBBB%%&MM*d0Uccvvurf|t/|(/fjrcQmbaoao#WMh*8%%%8%%8Wa#&M*oMM*aoooooooaaadj))
+[]]]{CvvUa88WbZbppb*MM*ahZOYxQW*&8%BBBB%BB%%8&W#kmQCUnnxfjjfnxvnvYCmwh#MMWMapp#BB8W8888WM&&W#M#M####***ooaak#v1)
+[]]]rXvXZ888&ab*ohhM&MoaOtxpM*%&W%%%&8%BB%BBB%&W#hhqZOLJYYUUCLZ0Oqba*M&&MaqZZp8BB8&%%%8&8%8&WWWM#M#******o**opQY
+[[[}zcXCo%8&88M#Moa*#*o0ma&B%%8&8%8&&88%BBBB%B%#MM#*okdwOZqpdkkko*M8&WodwOQQZaMW&&88888&&88MW&WWM##****#M&M*****
+[[[tUXUq8888%%%&&&&#*#M&&&MMMW8888%%%BBBBBBBBB%*bb*&&WWWMMWW#W&W&8WabwZQCJC0b*oM%8&&&&WW&&&WMWWMM####M&&WMM#####
+[}[cYYLW%%888%%8M*#MWWWW&&&W*aa&M8%BB%BBB%%%B%M#hdppkoMW######M*bwmOQCUUYUJZbhM&%&WWWWWWWWWMMMWM##M&8&WWWMMMM##*
+}}(JUYk8%8&88Mo*##MWWWWWWW8&&8%%B%%%%%88%B%%%B&*akdpqwwwqpppqwmZO0LCJUYXYULZqp*%&WWWWMMMMMWMMM##W&&&WWMMMM######
+}[vQzOW8%%&oo*##MMMWW&&&&8&&88%8&&8888888%%%%%%MhkkdqqwwwwwwwmZO0LJUYXXYJCCJO#WWWWMMMMMMMM#MM&88&WWWWWMMMMMMM###
+{1QCJh88%#ao*##MMMMMW&&&&88888888&&&&&&888%%%8%WapddqqwwwwwmZO0QCJUYYYUJUXvL#MMMMMMMMMMMMW&8%&WWWWWWWWWMMMMMM##*
+}xOY0M88oao*###MMMMWWWWW&888888888&&&&&&&88%%%8&opmmmZZZZmZO0QCJUYXXXXXcunQ#MMMMMM##M#M&%%8&&WMWWWWWWWMMMMWM##**
+{0OJk8Waa*#####MMMMMWWW&&&&88888888W&&&&&&&8%%%8#dZQLLCCCLLCJUYXzccvuuxxv0#MMMMMMMMWW&88&&&&WMMWMWWWWWMMMWW##***
+jkCOWM*oo#M###MMMMMMMMWW&&&&&&&&&&&8WW&WWWW&&888&kZQYXXXXXXXzcvvunxxrruXJaMMM##MWMM&8&WWW&&WWWWWWWWWWWWWWWM##***
+OmUbMo#o#MMMMMMMMMMMMWWWWW&&&&&&&&&&8&WWWWWWW&&&&8wUCUcvuvvvuunuxrrxcYuY*WWMMW&WoW8&WWMWWWWWWMMWWWWWWMWWWM##***#
+kUOao##*#MMMMMMMMWWMMMWWWWWWW&&&&&&&&88&WWWWWWWWW&WQczJLUzvuunnvzUYujuwMMWW&%%88&&&WWWMWWWWWWWMWWWWWWWWWWM##**##
+CLdo#MM##MMMMMMMMWWWMMMWWWWWWW&&&&&&&&8&&88WWWWWW&W#CcvvvczcccunxrjZWMW&888&&&&&&&WWWWWWWWWWWWWWWWWWWW&WM###*###
+Cka*MMM##MMWWMMMWMWWMWMWWWWWWW&&&&&&&&&&W8%%%8WMWWM&MbUvuuunnnxxrJM&&WW&&&&&&&&&WWWWMMWWWWWWWWWWWWWWW&WMMM#*##MM
+o*o#MWMM#MWWWWWWWWWWMMMWWWWWWWW&&&&&&&&W&88888%8WMMWW&o0cvuunnnnYo&W&&&&&&&&&&WWWWWWWWWWWWWWWWWWWWWW&WMMM####MMM
+**oMWWWWMMWWWWWWWWWWMMMWWWWW&WWW&&&&&&&W&8888888888&WMMMOcuuunuXh&&&&W&&&&&&WWWWWWWWWWWWWWWWWWWWWWW&WMMMM#####MM
+***MW&WWWMWWWWWWWWWWWWWWWWWW&WWWWWWW&&W&&888888888%%8&W#o0XcuuXkW&&&&&&&&&&WWWWWWWWWWWMWWWWWWWWWWWWWMMMMM###MMMM
+*#*MW&WW&WWWW&WWWWWWWMWWWWWWWWWW&WWWW&&&8&&&&&&&&&&8888&&WdJzXdW&&&&&&&&WWWWWWWWWWWWWWWWWWWMWWWWWWWMMMMM####MMMM
+##*MWWWW&&WWWWWWWWWWWWMMWWWWWW&&WWWW&&&&8&&&&&&&&&&&&&&8&WWpOq#W&&&&&&&&WWWWWWWWWWWWWWWWWWWWMWWWWWMMMM#M###MMMMM
+###MWW&&&&WWWWW&&WWWWWWWWWWWWWWWWWWW&&&&&&&&&&&&&&&&&&&&&WM0Zp&&&&&&&&&WWWWWWWWWWWWWWWWWWWWWWWWWWMMMMMM####MMMMM
+###MWW&&&&&WWWW&WWWWWWWWWWWWWWWWWWWW&&W&8&&&&W&&&&&&&&&&&8bpqa&&&&&&&&WWWWWWWWWWWW&WWWWWWWWWWWW&MMMMMMM###MMMMMM
+M##MWWWW&8&W&&&&WW&WWWWWWWWWWWWWWWWW&W&&&&&&&&&&&&&&&&&&8bQ00#W&&&&&&WWWWWWW&WWWWW&WWWWWWWWWW&WMMMMMM#MMMMMMMMWW
+MMMWWWW&&&&W&&&&&&W&WWWWWWWW&WWWWWW&&&&&&&&&&&&&&&&&&&W&*wa*m&&&&&&&WWWWWWWWWWWWWWWWWWWWWWWWW&WMMMMMMMMMMMMMWWWW
+MMMWWWW&&&&&&W&&WW&WWWWWWWWW&WWWWWW&&&&&&&&&&&&&&&&&&W&&8Maa#W&&&&WWWWWWWWWW&&WWWWWWWWWWWWWW&WWMMWMMMMMMMMMWMWWM</pre>
+    <figure>
+        <figcaption>A song I like, it's called <i>Hellfire</i>:</figcaption>
+        <audio controls src="assets/hellfire.mp3">
+            audio not supported
+        </audio>
+        <p> here it is in video form</p>
+        <video controls width="200">
+            <source src="assets/Hellfire.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        <details>
+            <summary>lyrics</summary>
+            [Verse 1]
+            There's always something
+            An odd twitch, hearing loss, a ringing noise, new flesh, a new bump, a weightlessness
+            A headache, a sore limb, an itchy gash, a mirage, a tumour, a scare
+            And when one is fixed another breaks
+            When some destroyed, more await
+            When it is time, no-one comes
+            When you have time, it is up
+            And even from without
+            There is nothing you will find running at full speed
+            Without a dent - factory-shine
+            Always slightly out of time
+            Always, always dust
+            Always, always, always no such thing as luck
+            Only chance and rot
+            Inevitablе loss
+            Running low
+            Almost empty
+            Almost always gone
+            Going going, gone
+            Each day quickеr
+            Each day gone lost
+            The more, the less
+            The less useless
+            That’s that
+            No more
+            Meet me at the door!
+
+        </details>
+        <label for="enjoyability">what would you rate it out of 10?</label>
+        <select id="enjoyability">
+            <optgroup label="Loved it">
+                <option>10</option>
+                <option>9</option>
+                <option>8</option>
+            </optgroup>
+            <optgroup label="It was alright">
+                <option>7</option>
+                <option>6</option>
+            </optgroup>
+            <optgroup label="meh">
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+            </optgroup>
+            <optgroup label="What even was that...">
+                <option>2</option>
+                <option>1</option>
+                <option>0</option>
+            </optgroup>
+        </select>
+        <article>
+            <p>if you're intrested here's the names of the tracks on the whole album:</p>
+            <ol>
+                <li>Hellfire</li>
+                <li>Sugar/Tzy</li>
+                <li>Eat Men Eat</li>
+                <li>Welcome to Hell</li>
+                <li>Still</li>
+                <li>Half Time</li>
+                <li>The Race Is About To Begin</li>
+                <li>Dangerous Liasons</li>
+                <li>The Defence</li>
+                <li>27 Questions</li>
+            </ol>
+            <p>And here is black midi's website:</p>
+            <iframe src="https://bmblackmidi.com"
+                    title="black midi's website" width="300" height="300">
+            </iframe>
+        </article>
+    </figure>
+    <h3>invisable me to be rendered later!?:</h3>
+    <template id="invisibleMe">
+        <img src="assets/selfie.jpg" alt="me that was loaded after the page">
+    </template>
+
+</section>
 </body>
 <footer>
     <hr>
